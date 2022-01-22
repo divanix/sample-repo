@@ -1,0 +1,14 @@
+# This is a basic workflow that is manually triggered
+
+name: sample workflow 
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: make
+    - run: |
+        gcc test.c -o test
+      
