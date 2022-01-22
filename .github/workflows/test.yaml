@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
        
     - name: make
-      run: gcc test.c -o test
+      run: gcc test.c -o /tmp/sid.out
 
   test:
     runs-on: ubuntu-latest
@@ -20,4 +20,4 @@ jobs:
     - name: ls
       run: ls -al
     - name: test
-      run: ./test | grep "Hello, World"
+      run: /tmp/sid.out | grep "Hello, World"
