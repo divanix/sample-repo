@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: make
-    - run: gcc test.c -o test
+      run: gcc test.c -o test
 
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
     - name: test
-    - run: ./test | grep "Hello, World"
+      run: ./test | grep "Hello, World"
